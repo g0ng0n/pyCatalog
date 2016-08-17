@@ -1,0 +1,40 @@
+{% extends "main.html" %}
+{% block content %}
+
+    <div class="col-sm-8 blog-main">
+
+         {% if category_id %}
+            <div class="col-md-3">
+                <span class="glyphicon glyphicon glyphicon-plus">
+                    <a href="{{url_for('newItem', category_id=category_id )}}">Add Item</a>
+                </span>
+            </div>
+        {% endif %}
+
+        </br>
+		<h2>Items</h2>
+        {% for item in items %}
+		    <a href = "#">
+			    <div class="row">
+				    <div class="col-md-1"></div>
+					    <div class="col-md-10 restaurant-list">
+						    <span>{{item.name}}</span>({{item.category.name}})
+
+					    </div>
+				    <div class="col-md-1"></div>
+			    </div>
+	    	</a>
+	    {% endfor %}
+
+    </div>
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
