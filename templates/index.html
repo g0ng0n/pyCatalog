@@ -14,7 +14,7 @@
         </br>
 		<h2>Items</h2>
         {% for item in items %}
-		    <a href = "#">
+		    <a href="{{url_for('showItem', category_id=item.category_id, item_id=item.id )}}">
 			    <div class="row">
 				    <div class="col-md-1"></div>
 					    <div class="col-md-10 restaurant-list">
