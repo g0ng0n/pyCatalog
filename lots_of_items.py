@@ -210,4 +210,4 @@ session.commit()
 
 
 
-print "added menu items!"
+print "added information into the database!"
