@@ -3,18 +3,16 @@
 
     <div class="col-sm-8 blog-main">
 
-         {% if category_id %}
             <div class="col-md-3">
                 <span class="glyphicon glyphicon glyphicon-plus">
-                    <a href="{{url_for('newItem', category_id=category_id )}}">Add Item</a>
+                    <a href="{{url_for('newItem')}}">Add Item</a>
                 </span>
             </div>
-        {% endif %}
 
         </br>
 		<h2>Items</h2>
         {% for item in items %}
-		    <a href="{{url_for('showItem', category_id=item.category_id, item_id=item.id )}}">
+		    <a href="{{url_for('showItem', item_id=item.id)}}">
 			    <div class="row">
 				    <div class="col-md-1"></div>
 					    <div class="col-md-10 restaurant-list">

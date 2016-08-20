@@ -17,6 +17,14 @@
 					<input type ="text" class="form-control" name="name" value="{{item.name }}">
                     <label for="description">Description:</label>
 					<textarea class="form-control" maxlength="250" rows="3" name="description">{{item.description}}</textarea>
+					</br>
+					<select name="category_id" value="{{item.category_id}}">
+						{% for category in categories %}
+							<option value="{{category.id}}">{{category.name}}</option>
+						{% endfor %}
+					</select>
+
+
 					<div class="padding-bottom"></div>
 					<button type="submit" class="btn btn-default" id="submit" type="submit">
 					<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Save</button>
@@ -29,3 +37,4 @@
 		</div>
 	</div>
 {% endblock %}
+
