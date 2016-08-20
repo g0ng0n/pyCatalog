@@ -36,6 +36,15 @@ class Category(Base):
     user_id = Column(Integer, ForeignKey('user.id'))
     name = Column(String(250), nullable=False)
 
+    @property
+    def serialize(self):
+        # returns object data in easily serializeable format
+        return {
+            'name': self.name,
+            'id': self.id,
+            'user_id': self.user_id,
+
+        }
 
 class Item(Base):
     __tablename__ = 'item'

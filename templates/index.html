@@ -3,11 +3,13 @@
 
     <div class="col-sm-8 blog-main">
 
+		{% if logged_in %}
             <div class="col-md-3">
                 <span class="glyphicon glyphicon glyphicon-plus">
                     <a href="{{url_for('newItem')}}">Add Item</a>
                 </span>
             </div>
+		{% endif %}
 
         </br>
 		<h2>Items</h2>

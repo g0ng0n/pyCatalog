@@ -11,9 +11,11 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-		  <li><a href="">Add Category</a></li>
-	  </ul>
+      {% if logged_in %}
+          <ul class="nav navbar-nav">
+              <li><a href="#">Add Category</a></li>
+          </ul>
+        {% endif %}
       <ul class="nav navbar-nav navbar-right">
        {%if 'username' not in session %}
         <li>
